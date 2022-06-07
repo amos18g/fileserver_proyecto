@@ -149,7 +149,7 @@ func listenClients(client net.Conn) {
 }
 
 func writeMessageAllUsers(ruta string, conn net.Conn, canal int) {
-	//ruta = "go.png"
+	
 	for i, _ := range clients {
 		if (clients[i].conn.RemoteAddr().String() != conn.RemoteAddr().String()) && clients[i].channel == canal {
 			clients[i].conn.Write([]byte(ruta))
