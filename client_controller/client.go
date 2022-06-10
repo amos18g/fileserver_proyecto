@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	conFiles "control/controller_files"
+	conFiles "control/files_controller"
 )
 
 const (
