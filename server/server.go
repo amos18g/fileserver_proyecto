@@ -122,7 +122,6 @@ func optionServer(client net.Conn, text string) {
 		channel, _ := strconv.Atoi(args[2])
 		channelNum := args[2]
 
-		//./client send miarchivo.png -channel 1
 		var clientSend string
 		for i, cs := range clients {
 			if dirClientCurrent == cs.conn.RemoteAddr().String() {
@@ -140,7 +139,6 @@ func optionServer(client net.Conn, text string) {
 
 		nameFile = "./" + nameFile
 
-		//conFiles.R(client, nameFile)
 		conFiles.ReceiveFiles(client, nameFile)
 		writeFilesAllUsers(nameFile, client, channel)
 
